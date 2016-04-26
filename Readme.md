@@ -1,6 +1,13 @@
 # Codificação Huffman
 Codifica e decodifica Strings usando o método de codificação Huffman.
 
+## Instalação 
+```bash
+$ git clone https://github.com/renanrmelo/Huffman
+$ cd Huffman
+```
+
+
 ## Codificação
 
 ```bash

@@ -49,17 +49,11 @@ class Huffman {
     $aText = split(PHP_EOL, $sText);
     $this->aTree = json_decode(base64_decode($aText[0]));
     $this->sText = $aText[1];
-
-
+    
     $this->aTree = $this->aTree[0][1];
 
-
-    // print_r($this->sText);
-    // print_r($this->aTree);
-    // die();
-
-    $aAux   = array();
-    $sSaida = '';
+    $aAux     = array();
+    $sDecoded = '';
 
     for ($iChar = 0; isset($this->sText[$iChar]); ++$iChar ) {
 
@@ -73,12 +67,12 @@ class Huffman {
       }
 
       if (is_string($aAux)) {
-        $sSaida .= $aAux; 
-        $aAux    = array();
+        $sDecoded .= $aAux; 
+        $aAux      = array();
       }
     }
 
-    print_r($sSaida);
+    return $sDecoded;
   }
 
   /**
